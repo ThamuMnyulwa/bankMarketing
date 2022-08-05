@@ -45,6 +45,15 @@ Describe the solution to the problems outlined above. Include enough detail to a
 
 - API that takes through data and outputs scores.
 
+
+```mermaid
+graph TD;
+  A-->B;
+  A-->C;
+  B-->D;
+  C-->D;
+```
+
 ### Risks
 
 Highlight risks so your reviewers can direct their attention here. 
