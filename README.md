@@ -1,19 +1,22 @@
 # UCL Bank marketing
 
-- Created: August 6, 2022 12:55 AM
+- Created: August 26, 2021 12:55 AM
 - Last Edited Time: August 6, 2022 1:01 AM
 - Status: In Progress 🙌
 - Type: Technical Spec
 
 # Summary
 
-1-2 sentence summary of what this document is about and why we should work on it. 
+This aim of this project is to build a simple credit model using bank data from UCI. The goal is to get to a good model which runs end-to-end and play with some considerations as if we where to put it into production. This is a fun exercise and is more about skills development that ``real ML'' so we do not focus too much on the model but more the thought process behind building it.
 
 ## Data source
 
-[[https://archive.ics.uci.edu/ml/machine-learning-databases/00222/](https://archive.ics.uci.edu/ml/machine-learning-databases/00222/)](Bank Marketing Data Set from UCI****)
+The original data is [Bank Marketing Data Set from UCI](https://archive.ics.uci.edu/ml/machine-learning-databases/00222/](https://archive.ics.uci.edu/ml/machine-learning-databases/00222/). This was added to this git repo in order to create an end-point to query throughout development.
+
 
 # Background
+
+This was originally a case study given in an unsucessful interview, but I enjoyed working on it so after gaining more experience, I have chosen to return to it a year later.
 
 What is the motivation for these changes? What problems will this solve? Include graphs, metrics, etc. if relevant. 
 
