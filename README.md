@@ -1,9 +1,9 @@
 # UCL Bank marketing
 
-Created: August 6, 2022 12:55 AM
-Last Edited Time: August 6, 2022 1:01 AM
-Status: In Progress 🙌
-Type: Technical Spec
+- Created: August 6, 2022 12:55 AM
+- Last Edited Time: August 6, 2022 1:01 AM
+- Status: In Progress 🙌
+- Type: Technical Spec
 
 # Summary
 
