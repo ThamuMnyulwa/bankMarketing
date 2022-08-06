@@ -62,7 +62,7 @@ Highlight risks so your reviewers can direct their attention here.
 
 ```mermaid
 graph TD
-    A[Exploratory Data Analysis (EDA)] -->|Gain some direction| B(Feature Engineering)
+    A[Exploratory Data Analysis `EDA`] -->|Gain some direction| B(Feature Engineering)
     B --> C(Resample)
     C -->|To deal with class imbalance| D[Feature Selection]
     D --> E[Model training]
