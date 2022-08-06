@@ -89,5 +89,9 @@ Ask any unresolved questions about the proposed solution here.
 
 What needs to be done next for this proposal? 
 
-- [ ]
+
+
+References:
+
+[1] [When is resampling beneficial for feature selection with imbalanced wide data?](https://www.sciencedirect.com/science/article/pii/S0957417421013622)
 
