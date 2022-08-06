@@ -9,7 +9,7 @@
 
 This aim of this project is to build a simple credit model using bank data from UCI. The goal is to get to a good model which runs end-to-end and play with some considerations as if we where to put it into production. This is a fun exercise and is more about skills development that "real ML" so we do not focus on the modelling but more the thought process behind building it.
 
-[_TOC_]
+[[_TOC_]]
 
 ## Data source
 
