@@ -1,7 +1,11 @@
 
 import numpy as np
 import pandas as pd
-
+import dateparser as date_parser
+from loguru import logger
+from pandas.errors import ParserError
+from collections import Counter
+from datetime import datetime
 from loguru import logger
 
 # python src/bankpackage/utils.py to test the function
@@ -37,6 +41,40 @@ def df_maker(df:pd.DataFrame=None):
         cnt += 1
     print('}')
 
+def parse_date(date_or_string):
+    if isinstance(date_or_string, pd.Timestamp):
+        return date_or_string.to_pydatetime().date()
+    if isinstance(date_or_string, datetime):
+        return date_or_string.date()
+    if isinstance(date_or_string, date):
+        return date_or_string
+    try:
+        return datetime.strptime(date_or_string, "%b-%y").date()
+    except ValueError:
+        pass
+    try:
+        return datetime.strptime(date_or_string, "_%b-%y").date()
+    except ValueError:
+        return date_parser.parse(date_or_string).date()
+    
+def date_columns_identifier(df):
+    """Automatically detect each dataframe column which can be seen as a datetime just 
+    when it is successfully parsed by df_utils.parse_date().
+    Args:
+        (dataframe) df: 
+    Returns:
+        (list) columns_date: list of datetime columns
+        (list) columns_date_as_datetime: list of date columns as datetime
+        (list) columns_not_date: list of not datetime columns
+    """
+    columns_date,columns_date_as_datetime, columns_not_date = [], [], [] # container for columns
+    for c in df.columns: #don't convert non datetime column names
+        try: 
+            columns_date_as_datetime.append(parse_date(c)) # keep both original form and datetime
+            columns_date.append(c)
+        except (ParserError,ValueError,TypeError): #Can't convert some
+            columns_not_date.append(c)
+    return columns_date,columns_date_as_datetime, columns_not_date
 
 # standard in python
 
