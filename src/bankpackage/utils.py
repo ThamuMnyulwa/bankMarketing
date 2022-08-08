@@ -42,6 +42,13 @@ def df_maker(df:pd.DataFrame=None):
     print('}')
 
 def parse_date(date_or_string):
+    """
+    If the input is a date, return it; if it's a string, try to parse it as a date
+    Args:
+      date_or_string: The date to parse.
+    Returns:
+      (datetime.datetime) A date object
+    """
     if isinstance(date_or_string, pd.Timestamp):
         return date_or_string.to_pydatetime().date()
     if isinstance(date_or_string, datetime):
