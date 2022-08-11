@@ -18,7 +18,7 @@ def load_dataset(url:str=None)->pd.DataFrame:
       (str) url: the url endpoint to the dataset
     Returns:
       (dataframe) data: A pandas dataframe
-    """cre
+    """
     with open(url) as f: # use with to import the data 
         data = pd.read_csv(f)
     return data
