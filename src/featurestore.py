@@ -6,9 +6,13 @@ from loguru import logger
 from bankpackage import utils, validation
 
 
-def import_from_url_no_credentials_necessary(link):
+def import_from_url_no_credentials_necessary(link: str = None):
     """
-    Import data from url endpoint without credentials necessary
+    Takes a link as an argument, makes a request to the link, and returns a pandas dataframe if the request is successful. No credentials necessary.
+    Args:
+      link (str): The url endpoint to import data from
+    Returns:
+      A dataframe.
     """
     try:
         response = requests.get(link)
@@ -29,5 +33,7 @@ def run():
     # import and validate data from url endpoint
     link = "https://raw.githubusercontent.com/ThamuMnyulwa/bankMarketing/main/data/bank-additional-full.csv"
     df = import_from_url_no_credentials_necessary(link).pipe(validation.ingress_schema)
+
+    # create features
 
     logger.info("End featurestore.py")
